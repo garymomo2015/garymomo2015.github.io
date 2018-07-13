@@ -23,9 +23,11 @@
 .fixed .btn, .items .btn {
 	padding-left: 0;
 	padding-right: 0;
+	line-height:1rem;
 	width: 40px;
+	height: 2.4rem;
 	font-size: 85%;
-	margin-bottom: 5px;
+	margin-bottom: 3px;
 }
 
 .items-head {
@@ -45,7 +47,7 @@
 }
 .items-detail {
 	font-size: 1.2rem;
-	line-height: 1.3rem;
+	line-height: 1.4rem;
 }
 .items-tiltle, .items-tiltle-ext {
 	padding-left: 5px;

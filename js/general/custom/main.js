@@ -67,20 +67,10 @@ window.onload = function afterload() {
 
 	var itemsSelector = $(".items");
 
-	itemsSelector.sort(function(a, b) {
-		var aVal = $(a).attr("id").substring(2, $(a).attr("id").length);
-		var bVal = $(b).attr("id").substring(2, $(b).attr("id").length);
-
-		if (parseInt(aVal) < parseInt(bVal)) {return 1;}
-		if (parseInt(aVal) > parseInt(bVal)) {return -1;}
-	});
-
-	$.each(itemsSelector, function(key, value) {
-		actionTL.from($(this), 0.2, {
-			alpha : 0,
-			scale : 5,
-			ease : SlowMo.ease.config(0.1, 0.1, false)
-		},"-=0.16");
+	actionTL.from(itemsSelector, 1, {
+		alpha : 0,
+		scale : 5,
+		ease : SlowMo.ease.config(0.1, 0.1, false)
 	});
 
 	arrowTL.from($("#arrowHead"), 1, {
