@@ -5,6 +5,7 @@
 
 	resize();
 	$(window).on("resize", resize);
+	$(window).on("scroll", resize);
 
 	function resize() {
 		width = window.innerWidth;
@@ -28,23 +29,32 @@
 		}
 		ori_width = width;
 	}
-	
+
+	$("#collapseParent").on("show.bs.collapse", function() {
+		$("#arrowHead").css("display", "none");
+	});
+
+	$("#collapseParent").on("shown.bs.collapse", function() {
+		$("#arrowBody").css("height", $(".actions").css("height"));
+		$("#arrowHead").css("display", "inline");
+	});
+
 	var fontTL = new TimelineMax({repeat: -1});
 	var fTLTime = 10;
 
-	fontTL.to($(".datatime"), fTLTime, {
+	fontTL.to($(".colorControl"), fTLTime, {
 		css : {color : "#cc3399", borderColor: "#cc3399"},
 		ease:Back.easeOut
 	})
-	.to($(".datatime"), fTLTime, {
+	.to($(".colorControl"), fTLTime, {
 		css : {color : "#cccc33", borderColor: "#cccc33"},
 		ease:Back.easeOut
 	})
-	.to($(".datatime"), fTLTime, {
+	.to($(".colorControl"), fTLTime, {
 		css : {color : "#cc3333", borderColor: "#cc3333"},
 		ease:Back.easeOut
 	})
-	.to($(".datatime"), fTLTime, {
+	.to($(".colorControl"), fTLTime, {
 		css : {color : "#9933cc", borderColor: "#9933cc"},
 		ease:Back.easeOut
 	});
@@ -52,7 +62,7 @@
 
 window.onload = function afterload() {
 	$("#arrowBody").css("height", $(".actions").css("height"));
-	var actionTL = new TimelineMax({paused : true});
+	var actionTL = new TimelineMax({paused : true, onComplete : nextStep});
 	var arrowTL = new TimelineMax();
 
 	var itemsSelector = $(".items");
@@ -66,11 +76,11 @@ window.onload = function afterload() {
 	});
 
 	$.each(itemsSelector, function(key, value) {
-		actionTL.from($(this), 0.5, {
+		actionTL.from($(this), 0.2, {
 			alpha : 0,
 			scale : 5,
 			ease : SlowMo.ease.config(0.1, 0.1, false)
-		},"-=0.3");
+		},"-=0.16");
 	});
 
 	arrowTL.from($("#arrowHead"), 1, {
@@ -81,4 +91,8 @@ window.onload = function afterload() {
 	});
 
 	actionTL.play();
+	
+	function nextStep() {
+		$(".anchor2").css("display", "block");
+	}
 }

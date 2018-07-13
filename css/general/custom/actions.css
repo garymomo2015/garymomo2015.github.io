@@ -1,14 +1,9 @@
-@import url(https://fonts.googleapis.com/earlyaccess/notosanstc.css);
-.actions {
-	text-align: center;
-}
-
 .actions .items {
 	margin: 1rem auto 0.5rem;
 	width: 90%;
 	border-radius: 3px;
 	font-family: "Noto Sans TC", sans-serif;
-	font-weight: 800;
+	font-weight: 900;
 	word-break: break-all;
 }
 
@@ -17,7 +12,8 @@
 	width: 90%;
 	border-radius: 3px;
 	font-family: "Noto Sans TC", sans-serif;
-	font-weight: 800;
+	font-weight: 900;
+	text-align: center;
 }
 
 .actionsImg {
@@ -27,13 +23,45 @@
 .fixed .btn, .items .btn {
 	padding-left: 0;
 	padding-right: 0;
-	width: 50px;
-	font-size: 75%;
+	width: 40px;
+	font-size: 85%;
 	margin-bottom: 5px;
+}
+
+.items-head {
+	text-align: center;
+}
+.items-tiltle {
+	font-size: 2rem;
+}
+.items-icon {
+	line-height: 3.6rem;
+	font-size: 3rem;
+}
+.items-icon a {
+	color: #9933cc;
+	position: absolute;
+	right: 1rem;
+}
+.items-detail {
+	font-size: 1.2rem;
+	line-height: 1.3rem;
+}
+.items-tiltle, .items-tiltle-ext {
+	padding-left: 5px;
+	padding-right: 5px;
+}
+.items-detail {
+	padding-left: 10px;
+	padding-right: 10px;
 }
 
 .live {
 	background-color: #33ffff;
+}
+.live-ext {
+	border: 3px solid #11dddd;
+	text-shadow: 1px 1px 0 #11dddd, -1px -1px 0 #11dddd, 1px -1px 0 #11dddd, -1px 1px 0 #11dddd, 1px 1px 0 #11dddd;
 }
 .music {
 	background-color: #ff3333;
@@ -45,7 +73,7 @@
 	background-color: #bb88cc;
 }
 .tvshow {
-	background-color: #997755;
+	background-color: #cccccc;
 }
 .anime {
 	background-color: #ff88c2;
@@ -57,10 +85,14 @@
 	background-color: #e0e066;
 }
 .book {
-	background-color: #cccccc;
+	background-color: #bb8800;
 }
 .other {
 	background-color: #66ff66;
+}
+.other-ext {
+	border: 3px solid #44dd44;
+	text-shadow: 1px 1px 0 #44dd44, -1px -1px 0 #44dd44, 1px -1px 0 #44dd44, -1px 1px 0 #44dd44, 1px 1px 0 #44dd44;
 }
 
 .it-momoclo-red {
@@ -85,10 +117,17 @@
 	text-shadow: 1px 1px 0 #000, -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
 	margin-left: auto;
 	margin-right: auto;
-	width: 35%;
+	width: 70%;
 	font-family: "Noto Sans TC", sans-serif;
-	font-weight: 800;
+	font-size: 2rem;
+	font-weight: 900;
 	background-color: #888888;
 	border-radius: 3px;
-	border: 2px solid #9933cc;
+	border: 6px solid #9933cc;
+	line-height: 5rem;
+}
+
+.item-disable {
+	display: none;
+	opacity: 0;
 }
