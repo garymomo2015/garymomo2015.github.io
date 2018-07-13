@@ -8,7 +8,6 @@
 			num = 12;
 		}
 		optionNum.text(num);
-		$("#datatimeGo").attr("href", "#month" + num.toString());
 	});
 
 	$(".glyphicon-triangle-right").on("click", function() {
@@ -18,8 +17,9 @@
 			num = 1;
 		}
 		optionNum.text(num);
-		$("#datatimeGo").attr("href", "#month" + num.toString());
 	});
 
-	
+	$(".glyphicon-search").on("click", function() {
+		$("html, body").animate({scrollTop: $("#month" + optionNum.text()).offset().top}, 2000);
+	});
 });

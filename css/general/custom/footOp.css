@@ -25,7 +25,7 @@
 .anchor2 {
 	display: none;
 }
-#datatimeGo .glyphicon-search {
+.glyphicon-search {
 	color: #000000;
 	position: relative;
 	top: 2px;
@@ -75,7 +75,7 @@
 		margin-bottom: 15px;
 	}
 }
-.back-to:hover, #datatimeGo span:hover {
+.back-to:hover, .glyphicon-search:hover {
 	color: #ffffff;
 	border-color: #ffffff;
 }
