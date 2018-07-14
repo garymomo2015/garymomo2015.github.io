@@ -58,13 +58,9 @@
 		css : {color : "#9933cc", borderColor: "#9933cc"},
 		ease:Back.easeOut
 	});
-});
-
-window.onload = function afterload() {
-	$("#arrowBody").css("height", $(".actions").css("height"));
+	
 	var actionTL = new TimelineMax({paused : true, onComplete : nextStep});
-	var arrowTL = new TimelineMax();
-
+	
 	var itemsSelector = $(".items");
 
 	actionTL.from(itemsSelector, 1, {
@@ -73,16 +69,25 @@ window.onload = function afterload() {
 		ease : SlowMo.ease.config(0.1, 0.1, false)
 	});
 
-	arrowTL.from($("#arrowHead"), 1, {
-		alpha : 0
-	})
-	.from($("#arrowBody"), 3, {
-		height : 0
-	});
-
 	actionTL.play();
+
+	setTimeout(afterload, 1000);
+});
+
+function afterload() {
+	$("#arrowBody").css("opacity", "1");
+	$("#arrowBody").css("height", $(".actions").css("height"));
 	
-	function nextStep() {
-		$(".anchor2").css("display", "block");
-	}
+	var arrowTL = new TimelineMax();
+
+	arrowTL.from($("#arrowBody"), 5, {
+		height : 0
+	})
+	.to($("#arrowHead"), 1.5, {
+		alpha : 1
+	});
+}
+
+function nextStep() {
+	$(".anchor2").css("display", "block");
 }
