@@ -63,6 +63,8 @@
 	
 	var itemsSelector = $(".items");
 
+	itemsSelector.css("opacity", "1");
+
 	actionTL.from(itemsSelector, 1, {
 		alpha : 0,
 		scale : 5,

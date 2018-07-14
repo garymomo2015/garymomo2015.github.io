@@ -5,6 +5,7 @@
 	font-family: "Noto Sans TC", sans-serif;
 	font-weight: 900;
 	word-break: break-all;
+	opacity: 0;
 }
 
 .actions .fixed {
