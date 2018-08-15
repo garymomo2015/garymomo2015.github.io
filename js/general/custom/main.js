@@ -40,38 +40,26 @@
 	});
 
 	var fontTL = new TimelineMax({repeat: -1});
-	var fTLTime = 10;
+	var fTLTime = 8;
 
 	fontTL.to($(".colorControl"), fTLTime, {
-		css : {color : "#cc3399", borderColor: "#cc3399"},
+		css : {color : "#f596aa", borderColor: "#f596aa"},
 		ease:Back.easeOut
 	})
 	.to($(".colorControl"), fTLTime, {
-		css : {color : "#cccc33", borderColor: "#cccc33"},
+		css : {color : "#ffb11b", borderColor: "#ffb11b"},
 		ease:Back.easeOut
 	})
 	.to($(".colorControl"), fTLTime, {
-		css : {color : "#cc3333", borderColor: "#cc3333"},
+		css : {color : "#e83015", borderColor: "#e83015"},
 		ease:Back.easeOut
 	})
 	.to($(".colorControl"), fTLTime, {
-		css : {color : "#9933cc", borderColor: "#9933cc"},
+		css : {color : "#986db2", borderColor: "#986db2"},
 		ease:Back.easeOut
 	});
-	
-	var actionTL = new TimelineMax({paused : true, onComplete : nextStep});
-	
-	var itemsSelector = $(".items");
 
-	itemsSelector.css("opacity", "1");
-
-	actionTL.from(itemsSelector, 1, {
-		alpha : 0,
-		scale : 5,
-		ease : SlowMo.ease.config(0.1, 0.1, false)
-	});
-
-	actionTL.play();
+	$(".items").css("animation-duration", "0.4S").addClass("animated rollIn");
 
 	setTimeout(afterload, 1000);
 });
@@ -79,8 +67,8 @@
 function afterload() {
 	$("#arrowBody").css("opacity", "1");
 	$("#arrowBody").css("height", $(".actions").css("height"));
-	
-	var arrowTL = new TimelineMax();
+
+	var arrowTL = new TimelineMax({onComplete : nextStep});
 
 	arrowTL.from($("#arrowBody"), 5, {
 		height : 0

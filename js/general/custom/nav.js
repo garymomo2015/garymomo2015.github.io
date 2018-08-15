@@ -30,10 +30,10 @@ document.writeln("				</li>");
 document.writeln("				<li class='dropdown'>");
 document.writeln("					<a class='dropdown-toggle' data-toggle='dropdown'>四葉 -絆-<span class='caret'></span></a>");
 document.writeln("					<ul class='dropdown-menu' id='momoNavMember'>");
-document.writeln("						<li><a>-若大將- 玉井詩織</a></li>");
-document.writeln("						<li><a>-太陽神- 百田夏菜子</a></li>");
-document.writeln("						<li><a>-BOSS- 佐佐木彩夏</a></li>");
-document.writeln("						<li><a>-鋼鐵娘- 高城蕾妮</a></li>");
+document.writeln("						<li><a href='https://ppt.cc/f5vNMx'>-若大將- 玉井詩織</a></li>");
+document.writeln("						<li><a href='https://ppt.cc/f10c4x'>-太陽神- 百田夏菜子</a></li>");
+document.writeln("						<li><a href='https://ppt.cc/fHJiBx'>-BOSS- 佐佐木彩夏</a></li>");
+document.writeln("						<li><a href='https://ppt.cc/fy4yLx'>-鋼鐵娘- 高城蕾妮</a></li>");
 document.writeln("					</ul>");
 document.writeln("				</li>");
 
