@@ -63,7 +63,7 @@
 }
 .live-ext {
 	border: 3px solid #11dddd;
-	text-shadow: 1px 1px 0 #11dddd, -1px -1px 0 #11dddd, 1px -1px 0 #11dddd, -1px 1px 0 #11dddd, 1px 1px 0 #11dddd;
+	text-shadow: 1px 1px 0 #11dddd, -1px -1px 0 #11dddd, 1px -1px 0 #11dddd, -1px 1px 0 #11dddd;
 }
 .music {
 	background-color: #ff5151;
@@ -94,7 +94,7 @@
 }
 .other-ext {
 	border: 3px solid #44dd44;
-	text-shadow: 1px 1px 0 #44dd44, -1px -1px 0 #44dd44, 1px -1px 0 #44dd44, -1px 1px 0 #44dd44, 1px 1px 0 #44dd44;
+	text-shadow: 1px 1px 0 #44dd44, -1px -1px 0 #44dd44, 1px -1px 0 #44dd44, -1px 1px 0 #44dd44;
 }
 
 .it-momoclo-red {
@@ -116,7 +116,7 @@
 .datatime {
 	color: #986db2;
 	text-align: center;
-	text-shadow: 1px 1px 0 #000, -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+	text-shadow: 1px 1px 0 #000, -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000;
 	margin-left: auto;
 	margin-right: auto;
 	width: 70%;

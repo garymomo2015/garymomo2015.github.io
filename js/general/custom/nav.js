@@ -37,7 +37,7 @@ document.writeln("						<li><a href='https://ppt.cc/fy4yLx'>-鋼鐵娘- 高城�
 document.writeln("					</ul>");
 document.writeln("				</li>");
 
-document.writeln("				<li><a>Page 3</a></li>");
+document.writeln("				<li><a href='https://ppt.cc/f6qcZx'>情報 -繫-</a></li>");
 document.writeln("			</ul>");
 document.writeln("		</div>");
 document.writeln("	</div>");
