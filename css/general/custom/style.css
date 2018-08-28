@@ -8,18 +8,6 @@ body {
 	overflow: hidden;
 }
 
-.arrow {
-	text-align: center;
-}
-#arrowBody {
-	width: 60%;
-	opacity: 0;
-}
-#arrowHead {
-	width:95%;
-	opacity: 0;
-}
-
 a, a:link, a:visited, a:hover {
 	text-decoration: none;
 }
