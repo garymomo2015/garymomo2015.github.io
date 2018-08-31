@@ -44,6 +44,7 @@
 	color: #986db2;
 	position: absolute;
 	right: 1rem;
+	cursor: pointer;
 }
 .items-detail {
 	font-size: 1.2rem;
