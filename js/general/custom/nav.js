@@ -43,7 +43,7 @@ document.writeln("					<a class='dropdown-toggle' data-toggle='dropdown'>傾聽 
 document.writeln("					<ul class='dropdown-menu'>");
 document.writeln("						<li class='dropdown-submenu'><a>依年份<span class='caret'></span></a>");
 document.writeln("							<ul class='dropdown-menu'>");
-document.writeln("								<li><a>&nbsp;&nbsp;&nbsp;2018</a></li>");
+document.writeln("								<li><a href='https://ppt.cc/fz0ihx'>&nbsp;&nbsp;&nbsp;2018</a></li>");
 document.writeln("								<li><a>&nbsp;&nbsp;&nbsp;2017</a></li>");
 document.writeln("								<li><a>&nbsp;&nbsp;&nbsp;2016</a></li>");
 document.writeln("								<li><a>&nbsp;&nbsp;&nbsp;2015</a></li>");
