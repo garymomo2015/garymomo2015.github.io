@@ -20,6 +20,11 @@
 	word-break: break-all;
 }
 
+.items:not(.it-momoclo-red):not(.it-momoclo-purple):not(.it-momoclo-pink):not(.it-momoclo-yellow):not(.it-momoclo-green):not(.it-momoclo-all) {
+	display: none;
+	opacity: 0;
+}
+
 .actions .fixed {
 	margin: 1rem auto 0.5rem;
 	width: 90%;
@@ -168,6 +173,11 @@
 }
 
 .item-disable {
+	display: none;
+	opacity: 0;
+}
+
+#tags-all {
 	display: none;
 	opacity: 0;
 }
