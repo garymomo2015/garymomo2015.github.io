@@ -53,4 +53,14 @@
 	});
 
 	$(".items").css("animation-duration", "4s").addClass("animated fadeInLeft");
+
+	$(".tags span").on("click tap", function() {
+		$(".items:not(.it-momoclo-red,.it-momoclo-purple,.it-momoclo-pink,.it-momoclo-yellow,.it-momoclo-green,.it-momoclo-all)").hide();
+		var target = $(this).attr("id").split("-")[1];
+		if (target == "all") {
+			$(".items:not(.item-disable)").show();
+		} else {
+			$("." + target + ":not(.item-disable)").show();
+		}
+	});
 });

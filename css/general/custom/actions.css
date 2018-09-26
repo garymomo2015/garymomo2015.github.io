@@ -1,3 +1,16 @@
+.tags {
+	padding-left: 50px;
+}
+.tags span {
+	color: #000000;
+	font-family: "Noto Sans TC", sans-serif;
+	font-weight: 900;
+	text-shadow: 1px 1px 0 #ffffff, -1px -1px 0 #ffffff, 1px -1px 0 #ffffff, -1px 1px 0 #ffffff;
+	margin-right: 5px;
+	line-height: 4.6rem;
+	cursor: pointer;
+}
+
 .actions .items {
 	margin: 1rem auto 0.5rem;
 	width: 90%;
@@ -70,7 +83,7 @@
 	background-color: #ff5151;
 }
 .dvdbd {
-	background-color: #dd7700;
+	background-color: #fc9f4d;
 }
 .network {
 	background-color: #bb88cc;
@@ -90,6 +103,9 @@
 .book {
 	background-color: #bb8800;
 }
+.game {
+	background-color: #7b90d2;
+}
 .other {
 	background-color: #66ff66;
 }
@@ -101,20 +117,38 @@
 .it-momoclo-red {
 	background-color: #e83015;
 }
+.it-momoclo-red .animated {
+	animation-duration: 1.8s;
+}
 .it-momoclo-purple {
 	background-color: #986db2;
+}
+.it-momoclo-purple .animated {
+	animation-duration: 1.8s;
 }
 .it-momoclo-pink {
 	background-color: #f596aa;
 }
+.it-momoclo-pink .animated {
+	animation-duration: 1.8s;
+}
 .it-momoclo-yellow {
 	background-color: #ffb11b;
+}
+.it-momoclo-yellow .animated {
+	animation-duration: 1.8s;
 }
 .it-momoclo-green {
 	background-color: #227d51;
 }
+.it-momoclo-green .animated {
+	animation-duration: 1.8s;
+}
 .it-momoclo-all {
 	background-color: #ffffff;
+}
+.it-momoclo-all .animated {
+	animation-duration: 1.8s;
 }
 
 .datatime {
