@@ -8,6 +8,22 @@ body {
 	overflow: hidden;
 }
 
+#special-info {
+	margin-top: 4rem;
+	margin-bottom: 0px;
+	padding-bottom: 0px;
+	color: #ffffff;
+	text-align: center;
+	line-height: 2.2rem;
+	font-size: 2rem;
+	word-break: break-all;
+}
+
+#special-info a, #special-info a:link, #special-info a:visited, #special-info a:hover {
+	color: #aaaaaa;
+	text-decoration: none;
+}
+
 a, a:link, a:visited, a:hover {
 	text-decoration: none;
 }

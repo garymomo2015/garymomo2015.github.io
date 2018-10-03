@@ -93,6 +93,10 @@
 .network {
 	background-color: #bb88cc;
 }
+.network-ext {
+	border: 3px solid #9966aa;
+	text-shadow: 1px 1px 0 #9966aa, -1px -1px 0 #9966aa, 1px -1px 0 #9966aa, -1px 1px 0 #9966aa;
+}
 .tvshow {
 	background-color: #cccccc;
 }

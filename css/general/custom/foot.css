@@ -10,3 +10,8 @@
 	padding: 5px;
 	display: block;
 }
+
+.momofoot a, .momofoot a:link, .momofoot a:visited, .momofoot a:hover {
+	color: #aaaaaa;
+	text-decoration: none;
+}
