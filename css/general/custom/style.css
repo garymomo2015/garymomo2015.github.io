@@ -10,7 +10,7 @@ body {
 	height: 100%;
 	z-index: 9999;
 	background: url('../../../image/general/loader.gif') 50% 50% no-repeat #000000;
-	opacity: .8;
+	opacity: .9;
 }
 
 .fullContain {
