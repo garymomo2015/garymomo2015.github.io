@@ -44,7 +44,7 @@ document.writeln("					<ul class='dropdown-menu' id='momoNavMember'>");
 document.writeln("						<li><a href='https://garymomoindex.github.io/member/yellow'>-若大將- 玉井詩織</a></li>");
 document.writeln("						<li><a href='https://garymomoindex.github.io/member/red'>-太陽神- 百田夏菜子</a></li>");
 document.writeln("						<li><a href='https://garymomoindex.github.io/member/pink'>-BOSS- 佐佐木彩夏</a></li>");
-document.writeln("						<li><a href='https://garymomoindex.github.io/member/purple'>-鋼鐵娘- 高城蕾妮</a></li>");
+document.writeln("						<li><a href='https://garymomoindex.github.io/member/purple'>-鋼鐵妹- 高城蕾妮</a></li>");
 document.writeln("					</ul>");
 document.writeln("				</li>");
 
