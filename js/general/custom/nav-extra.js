@@ -6,7 +6,7 @@ document.writeln("				<span class='icon-bar'></span>");
 document.writeln("				<span class='icon-bar'></span>");
 document.writeln("				<span class='icon-bar'></span>");
 document.writeln("			</button>");
-document.writeln("			<a class='navbar-brand' href='https://garymomoindex.github.io/?visit=true'><img src='image/icon/MCZ_PNG.png' title='回首頁'></a>");
+document.writeln("			<a class='navbar-brand' href='https://garymomoindex.github.io/?visit=true'><img src='../image/icon/MCZ_PNG.png' title='回首頁'></a>");
 document.writeln("		</div>");
 document.writeln("		<div class='collapse navbar-collapse' id='momoNavbar'>");
 document.writeln("			<ul class='nav navbar-nav'>");
