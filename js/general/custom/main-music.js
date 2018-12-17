@@ -79,7 +79,8 @@
 		if (urlParam != "no") {
 			var mainClass = urlParam.split("-")[0] ? urlParam.split("-")[0] : "no";
 			var subClass = urlParam.split("-")[1] ? urlParam.split("-")[1] : "no";
-			if (mainClass != "no" && subClass != "no") {
+			var itemClass = urlParam.split("-")[2] ? urlParam.split("-")[2] : "no";
+			if (mainClass != "no" && subClass != "no" && itemClass != "no") {
 				var targetClass = "";
 				if (mainClass == "") {
 					
@@ -87,9 +88,9 @@
 					targetClass = "music";
 				}
 				if (subClass == "2016") {
-					location.replace("https://garymomo" + subClass + ".github.io/redirection/" + targetClass);
+					location.replace("https://garymomo" + subClass + ".github.io/redirection/" + targetClass + "?item=" + itemClass);
 				} else {
-					location.replace("https://garymomo" + subClass + ".github.io/" + targetClass);
+					location.replace("https://garymomo" + subClass + ".github.io/" + targetClass + "?item=" + itemClass);
 				}
 			} else {
 				location.replace("https://garymomoindex.github.io/?visit=true");
