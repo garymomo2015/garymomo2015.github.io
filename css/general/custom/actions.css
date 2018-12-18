@@ -57,11 +57,12 @@
 .items-icon {
 	line-height: 3.6rem;
 	font-size: 3rem;
+	text-align: right;
+	padding-right: 4.5rem;
 }
 .items-icon a {
 	color: #986db2;
 	position: absolute;
-	right: 1rem;
 	cursor: pointer;
 }
 .items-detail {
@@ -126,38 +127,20 @@
 .it-momoclo-red {
 	background-color: #e83015;
 }
-.it-momoclo-red .animated {
-	animation-duration: 1.8s;
-}
 .it-momoclo-purple {
 	background-color: #986db2;
-}
-.it-momoclo-purple .animated {
-	animation-duration: 1.8s;
 }
 .it-momoclo-pink {
 	background-color: #f596aa;
 }
-.it-momoclo-pink .animated {
-	animation-duration: 1.8s;
-}
 .it-momoclo-yellow {
 	background-color: #ffb11b;
-}
-.it-momoclo-yellow .animated {
-	animation-duration: 1.8s;
 }
 .it-momoclo-green {
 	background-color: #227d51;
 }
-.it-momoclo-green .animated {
-	animation-duration: 1.8s;
-}
 .it-momoclo-all {
 	background-color: #ffffff;
-}
-.it-momoclo-all .animated {
-	animation-duration: 1.8s;
 }
 
 .datatime {

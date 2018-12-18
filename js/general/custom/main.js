@@ -2,7 +2,7 @@
 	var width = window.innerWidth;
 	var ori_width = "0";
 	var setheight = "0";
-	var animationEnd = "webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend";
+	var actionRLock = false;
 
 	resize();
 	$(window).on("resize", resize);
@@ -52,17 +52,29 @@
 		ease:Back.easeOut
 	});
 
-	$(".items").css("animation-duration", "4s").addClass("animated fadeInLeft");
+	var memberTL = new TimelineMax({ repeat: -1 });
+	memberTL.to($(".items-member"), 3, { autoAlpha: 0.75, scale: 0.95 })
+	.to($(".items-member"), 2, { autoAlpha: 1, scale: 1 });
 
 	$(".tags span").on("click tap", function() {
+		if (actionRLock) {
+			return;
+		}
+		actionRLock = true;
 		$(".items:not(.it-momoclo-red,.it-momoclo-purple,.it-momoclo-pink,.it-momoclo-yellow,.it-momoclo-green,.it-momoclo-all)").hide();
 		var target = $(this).attr("id").split("-")[1];
 		if (target == "all") {
-			$(".items:not(.item-disable)").show();
+			$(".items:not(.item-disable)").css("opacity", "1").show();
+			TweenLite.from($(".items:not(.item-disable)"), 1.5, { autoAlpha: 0.1, onComplete:finishActionR });
 		} else {
-			$("." + target + ":not(.item-disable)").show();
+			$("#collapseParent ." + target + ":not(.item-disable)").css("opacity", "1").show();
+			TweenLite.from($("#collapseParent ." + target + ":not(.item-disable)"), 0.8, { rotation: 90, autoAlpha: 0.1, onComplete:finishActionR });
 		}
 	});
+	
+	function finishActionR() {
+		actionRLock = false;
+	}
 });
 
 $(window).on("load", function() {

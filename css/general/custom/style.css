@@ -45,7 +45,6 @@ a, a:link, a:visited, a:hover {
 	margin-bottom: 3rem;
 }
 .music-cover {
-	animation-duration: 2s;
 	position: relative;
 	cursor: pointer;
 }
@@ -65,7 +64,6 @@ a, a:link, a:visited, a:hover {
 .music-intro-1 {
 	background-color: #ffffff;
 	padding: 0px;
-	animation-duration: 2s;
 	display: none;
 }
 .music-intro-1 img {
@@ -94,7 +92,6 @@ a, a:link, a:visited, a:hover {
 }
 .music-intro-2 {
 	background-color: #aaaaaa;
-	animation-duration: 2s;
 	display: none;
 }
 .music-intro-name-2, .music-tabs {
@@ -117,7 +114,6 @@ a, a:link, a:visited, a:hover {
 }
 .music-intro-3 {
 	background-color: #aaaaaa;
-	animation-duration: 2s;
 	display: none;
 	padding-top: 0.8rem;
 	padding-bottom: 0.8rem;

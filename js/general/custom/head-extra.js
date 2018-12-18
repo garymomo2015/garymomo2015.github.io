@@ -10,7 +10,6 @@ document.writeln("<link rel='stylesheet' href='../css/jquery-ui.theme.min.css' /
 document.writeln("<link rel='stylesheet' href='../css/bootstrap.min.css' />");
 document.writeln("<link rel='stylesheet' href='../css/bootstrap-theme.min.css' />");
 
-document.writeln("<link rel='stylesheet' href='../css/animate.css' />");
 //custom
 document.writeln("<link rel='stylesheet' href='../css/general/custom/style.css' />");
 document.writeln("<link rel='stylesheet' href='../css/general/custom/nav.css' />");

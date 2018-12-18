@@ -2,7 +2,8 @@
 	var width = window.innerWidth;
 	var ori_width = "0";
 	var setheight = "0";
-	var animationEnd = "webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend";
+	var passTarget = null;
+	var passLock = false;
 
 	// initial tab for IE problem
 	$(".nav-tabs a:eq(0)").trigger("click");
@@ -57,22 +58,38 @@
 	});
 
 	$(".music-cover").on("click tap", function() {
-		$(this).addClass("animated zoomOutLeft").one(animationEnd, function() {
-			$(this).hide();
-			var target = $(this).parents(".music-items").find(".music-intro-1");
-			target.show();
-			target.addClass("animated fadeInLeft");
-			target = $(this).parents(".music-items").find(".music-intro-2");
-			target.show();
-			target.addClass("animated fadeInLeft");
-			target = $(this).parents(".music-items").find(".music-intro-3");
-			target.show();
-			target.addClass("animated fadeInRight");
-			resize();
-			$("html, body").animate({scrollTop: $("#" + $(this).parents(".music-items").attr("id")).offset().top}, 500);
-		});
+
+		if (passLock) {
+			return;
+		}
+		passLock = true;
+		passTarget = $(this);
+		var coverTL1 = new TimelineMax({ onComplete:nextCover });
+		coverTL1.to(passTarget, 0.5, { scale: 0.2 })
+		.to(passTarget, 0.3, { x: -200, autoAlpha: 0 });
 	});
-	
+
+	function nextCover() {
+
+		passTarget.hide();
+		var coverTL2 = new TimelineMax({ onComplete:finishCover });
+		var target = passTarget.parents(".music-items").find(".music-intro-1");
+		target.show();
+		coverTL2.from(target, 1, { x: -200, autoAlpha: 0 });
+		target = passTarget.parents(".music-items").find(".music-intro-2");
+		target.show();
+		coverTL2.from(target, 1, { x: -200, autoAlpha: 0 }, "-=1");
+		target = passTarget.parents(".music-items").find(".music-intro-3");
+		target.show();
+		coverTL2.from(target, 1, { x: 200, autoAlpha: 0 }, "-=1");
+		resize();
+		$("html, body").animate({scrollTop: $("#" + passTarget.parents(".music-items").attr("id")).offset().top}, 500);
+	}
+
+	function finishCover() {
+		passLock = false;
+	}
+
 	$(".music-extra-back a").on("click tap", function() {
 		var urlParam = window.location.search.split("back=")[1] ? window.location.search.split("back=")[1] : "no";
 
@@ -102,27 +119,27 @@
 });
 
 $(window).on("load", function() {
-	var animationEnd = "webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend";
 
 	$(".loader").hide();
 
-	var borderTL = new TimelineMax({onComplete : nextStep});
+	var borderTL = new TimelineMax({ onComplete : nextMusicExtra });
 
 	borderTL.to($(".music-extra-box"), 0.5, {
 		alpha : 0.5
 	})
-	.to($(".music-extra-box"), 0.1, {
-		alpha : 0
-	}, "+=0.5")
 	.to($(".music-extra-box"), 0.8, {
-		alpha : 1
+		alpha: 0, ease: Elastic.easeIn.config(1, 0.2)
+	}, "+=0.5")
+	.to($(".music-extra-box"), 0.3, {
+		alpha: 1
 	});
 
-	function nextStep() {
+	function nextMusicExtra() {
 		$(".music-extra-items").css("opacity", "1");
-		$(".music-extra-title").css("animation-duration", "1s").addClass("animated fadeInDown");
-		$(".music-extra-audit").css("animation-duration", "1s").addClass("animated fadeInRight");
-		$(".music-extra-video").css("animation-duration", "1s").addClass("animated zoomIn");
-		$(".music-extra-detail").css("animation-duration", "1s").addClass("animated fadeInUp");
+		var extraTL = new TimelineMax();
+		extraTL.from($(".music-extra-title"), 1, { y: -200, autoAlpha: 0 })
+		.from($(".music-extra-audit"), 1, { x: 400, autoAlpha: 0 }, "-=1")
+		.from($(".music-extra-video"), 1, { scale: 0.1, autoAlpha: 0 }, "-=1")
+		.from($(".music-extra-detail"), 1, { x: -200, autoAlpha: 0 }, "-=1");
 	}
 });
