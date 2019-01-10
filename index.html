@@ -32,20 +32,66 @@
 		<div class="mainContain">
 			<div class="row">
 				<div class="col-xs-12 tags">
-					<h2>
-						<span class="label all" id="tags-all">&nbsp;&nbsp;全列表&nbsp;&nbsp;</span>
-						<span class="label live" id="tags-live">找LIVE相關區塊</span>
-						<span class="label music" id="tags-music">找音樂作品相關區塊</span>
-						<span class="label dvdbd" id="tags-dvdbd">找影像作品相關區塊</span>
-						<span class="label network" id="tags-network">找網路相關區塊</span>
-						<span class="label tvshow" id="tags-tvshow">找電視相關區塊</span>
-						<span class="label anime" id="tags-anime">找動漫作品相關區塊</span>
-						<span class="label movie" id="tags-movie">找電影作品相關區塊</span>
-						<span class="label radio" id="tags-radio">找廣播相關區塊</span>
-						<span class="label book" id="tags-book">找書報雜誌相關區塊</span>
-						<span class="label game" id="tags-game">找遊戲作品相關區塊</span>
-						<span class="label other" id="tags-other">找其他區塊</span>
-					</h2>
+					<div class="row">
+						<div class="col-xs-4 live tags-item" id="tags-live">
+							<div><span class="glyphicon glyphicon-music"></span></div>
+							<p>找LIVE</p>
+						</div>
+						<div class="col-xs-4 music tags-item" id="tags-music">
+							<div><span class="glyphicon glyphicon-cd"></span></div>
+							<p>找音樂作品</p>
+						</div>
+						<div class="col-xs-4 dvdbd tags-item" id="tags-dvdbd">
+							<div><span class="glyphicon glyphicon-facetime-video"></span></div>
+							<p>找影像作品</p>
+						</div>
+					</div>
+					<br>
+					<div class="row">
+						<div class="col-xs-4 book tags-item" id="tags-book">
+							<div><span class="glyphicon glyphicon-book"></span></div>
+							<p>找書籍雜誌</p>
+						</div>
+						<div class="col-xs-4 tvshow tags-item" id="tags-tvshow">
+							<div><span class="glyphicon glyphicon-sunglasses"></span></div>
+							<p>找電視演出</p>
+						</div>
+						<div class="col-xs-4 radiosign tags-item" id="tags-radiosign">
+							<div><span class="glyphicon glyphicon-signal"></span></div>
+							<p>找廣播演出</p>
+						</div>
+					</div>
+					<br>
+					<div class="row">
+						<div class="col-xs-4 movie tags-item" id="tags-movie">
+							<div><span class="glyphicon glyphicon-film"></span></div>
+							<p>找電影演出</p>
+						</div>
+						<div class="col-xs-4 network tags-item" id="tags-network">
+							<div><span class="glyphicon glyphicon-globe"></span></div>
+							<p>找網路相關</p>
+						</div>
+						<div class="col-xs-4 anime tags-item" id="tags-anime">
+							<div><span class="glyphicon glyphicon-fire"></span></div>
+							<p>找動漫相關</p>
+						</div>
+					</div>
+					<br>
+					<div class="row">
+						<div class="col-xs-4 game tags-item" id="tags-game">
+							<div><span class="glyphicon glyphicon-knight"></span></div>
+							<p>找遊戲相關</p>
+						</div>
+						<div class="col-xs-4 other tags-item" id="tags-other">
+							<div><span class="glyphicon glyphicon-user"></span></div>
+							<p>找其他活動</p>
+						</div>
+						<div class="col-xs-4 all tags-item" id="tags-all">
+							<div><span class="glyphicon glyphicon-eye-open"></span></div>
+							<p>全部列表</p>
+						</div>
+					</div>
+					<br>
 				</div>
 			</div>
 			<div class="row">
@@ -153,7 +199,7 @@
 							<a class="btn btn-info" role="button" target="_blank" href="https://twitter.com/momoclochan_ex">Tt</a>
 						</p>
 					</div>
-					<div class="fixed radio panel">
+					<div class="fixed radiosign panel">
 						<h4><b>廣播 TOKYO FM</b></h4>
 						<figure><img class="actionsImg" src="image/radio-suzuki.png" /></figure>
 						<p>日期：每週星期日</p>
@@ -163,7 +209,7 @@
 							<a class="btn btn-info" role="button" target="_blank" href="https://twitter.com/happyclo">Tt</a>
 						</p>
 					</div>
-					<div class="fixed radio panel">
+					<div class="fixed radiosign panel">
 						<h4><b>廣播 日本放送</b></h4>
 						<figure><img class="actionsImg" src="image/radio-xoxo-5.jpg" /></figure>
 						<p>日期：每週星期日</p>
@@ -201,15 +247,20 @@
 			</div>
 		</div>
 
-		<div class="footer-option"></div>
-		<a href="#top" class="anchor1 back-to" title="回上層"><b>回上層</b></a>
-		<p class="anchor2 back-to">
-			<span class="option-lr glyphicon glyphicon-triangle-left"></span>
-			<span id="datatimeNum">1</span><b>月</b>
-			<span class="option-lr glyphicon glyphicon-triangle-right"></span>
-			<span class="glyphicon glyphicon-search"></span>
-		</p>
-		<a href="https://garymomoindex.github.io/?visit=true" class="anchor3 back-to" title="回首頁"><b>回首頁</b></a>
+		<div class="footer-option">
+			<p class="anchor1 back-to"><a href="#top" title="回上層"><b>回上層</b></a></p>
+			<p class="anchor2 back-to">
+				<span class="option-lr glyphicon glyphicon-minus-sign"></span>
+				<span id="datatimeNum">1</span><b>月</b>
+				<span class="option-lr glyphicon glyphicon-plus-sign"></span>
+				<span class="glyphicon glyphicon-search"></span>
+			</p>
+			<p class="anchor3 back-to"><a href="https://garymomoindex.github.io/?visit=true" title="回首頁"><b>回首頁</b></a></p>
+
+			<figure>
+				<img src="image/general/icon/videoGear.png" title="收起">
+			</figure>
+		</div>
 
 		<footer>
 			<div class='momofoot'>
