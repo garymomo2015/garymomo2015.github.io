@@ -158,26 +158,12 @@ $(window).on("load", function() {
 
 	$(".loader").hide();
 
-	var borderTL = new TimelineMax({ onComplete : nextMusicExtra });
+	var extraTL = new TimelineMax();
 
-	borderTL.to($(".music-extra-box"), 0.5, {
-		alpha : 0.5
-	})
-	.to($(".music-extra-box"), 0.8, {
-		alpha: 0, ease: Elastic.easeIn.config(1, 0.2)
-	}, "+=0.5")
-	.to($(".music-extra-box"), 0.3, {
-		alpha: 1
-	});
-
-	function nextMusicExtra() {
-		$(".music-extra-items").css("opacity", "1");
-		var extraTL = new TimelineMax();
-		extraTL.from($(".music-extra-title"), 1, { y: -200, autoAlpha: 0 })
-		.from($(".music-extra-audit"), 1, { x: 400, autoAlpha: 0 }, "-=1")
-		.from($(".music-extra-video"), 1, { scale: 0.1, autoAlpha: 0 }, "-=1")
-		.from($(".music-extra-detail"), 1, { x: -200, autoAlpha: 0 }, "-=1")
-		.from($(".music-extra-line-ext"), 0.3, { autoAlpha: 0 })
-		.from($(".music-extra-line"), 1, { autoAlpha: 0 });
-	}
+	extraTL.from($(".music-extra-title"), 1, { y: -200, autoAlpha: 0 })
+	.from($(".music-extra-audit"), 1, { x: 400, autoAlpha: 0 }, "-=1")
+	.from($(".music-extra-video"), 1, { scale: 0.1, autoAlpha: 0 }, "-=1")
+	.from($(".music-extra-detail"), 1, { x: -200, autoAlpha: 0 }, "-=1")
+	.from($(".music-extra-line-ext"), 0.3, { autoAlpha: 0 })
+	.from($(".music-extra-line"), 1, { autoAlpha: 0 });
 });
