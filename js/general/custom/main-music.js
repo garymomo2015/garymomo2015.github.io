@@ -1,42 +1,4 @@
 ﻿$(document).ready(function() {
-	var width = window.innerWidth;
-	var ori_width = "0";
-	var setheight = "0";
-	var passTarget = null;
-	var passLock = false;
-
-	// initial tab for IE problem
-	$(".nav-tabs a:eq(0)").trigger("click");
-	$(".nav-tabs a:eq(1)").trigger("blur");
-	$(".nav-tabs a:eq(2)").trigger("blur");
-
-	resize();
-	$(window).on("resize", resize);
-
-	function resize() {
-		width = window.innerWidth;
-
-		$(".mainContain").css("height","auto");
-		if($(window).height() > $(".mainContain").css("height").substring(0, $(".mainContain").css("height").indexOf("px"))) {
-//			setheight = $(window).height();
-//			$(".mainContain").css("height", setheight);
-		}
-
-		if (width != ori_width) {
-			if (width > 767) {
-				$(".container-fluid").css("padding-right", "0px");
-				$(".container-fluid").css("padding-left", "0px");
-				$(".music-intro-dummy-1").show();
-				$(".music-intro-dummy-2").show();
-			} else {
-				$(".container-fluid").css("padding-right", "15px");
-				$(".container-fluid").css("padding-left", "15px");
-				$(".music-intro-dummy-1").hide();
-				$(".music-intro-dummy-2").hide();
-			}
-		}
-		ori_width = width;
-	}
 
 	var fontTL = new TimelineMax({repeat: -1});
 	var fTLTime = 12;
@@ -61,6 +23,9 @@
 		css : {color : "#986db2", borderColor: "#986db2"},
 		ease:Back.easeOut
 	});
+
+	var passTarget = null;
+	var passLock = false;
 
 	$(".music-cover").on("click tap", function() {
 
@@ -87,7 +52,6 @@
 		target = passTarget.parents(".music-items").find(".music-intro-3");
 		target.show();
 		coverTL2.from(target, 1, { x: 200, autoAlpha: 0 }, "-=1");
-		resize();
 		$("html, body").animate({scrollTop: $("#" + passTarget.parents(".music-items").attr("id")).offset().top}, 500);
 	}
 
@@ -123,28 +87,30 @@
 	});
 
 	$(".btn-modal").on("click tap", function() {
-		var htmlIframe1 = '<iframe src="https://www.youtube.com/embed/';
-		var htmlIframe2 = '" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>';
+		var htmlIframe1 = '<div class="embed-responsive embed-responsive-16by9"><iframe class="embed-responsive-item" src="https://www.youtube.com/embed/';
+		var htmlIframe2 = '" allowfullscreen></iframe></div>';
 		var htmlIframeSrc = '';
 		var chkId = $(this).attr("id");
-		if (chkId == 'adModala1-1') {
-			htmlIframeSrc = 'o5q6molnWDc';
-		} else if (chkId == 'adModala1-2') {
-			htmlIframeSrc = 'fe0FM4m42g0';
-		} else if (chkId == 'adModalb1-1') {
-			htmlIframeSrc = '5FCgNzdLFY0';
+		if (chkId == 'adModalb1-1') {
+			htmlIframeSrc = '7qrI_oPUQdw';
 		} else if (chkId == 'adModalb1-2') {
+			htmlIframeSrc = '5FCgNzdLFY0';
+		} else if (chkId == 'adModalb1-3') {
 			htmlIframeSrc = 'u3n-ANG13R0';
 		} else if (chkId == 'adModalb2') {
 			htmlIframeSrc = 'CwBa9kau9qg';
-		} else if (chkId == 'adModalb4-1') {
+		} else if (chkId == 'adModalb3-1') {
 			htmlIframeSrc = 'djY1lfEt7Eg';
-		} else if (chkId == 'adModalb4-2') {
+		} else if (chkId == 'adModalb3-2') {
 			htmlIframeSrc = 'vkiqA98Fi9k';
-		} else if (chkId == 'adModalb4-3') {
+		} else if (chkId == 'adModalb3-3') {
 			htmlIframeSrc = 'Lve-2wkdbPY';
-		} else if (chkId == 'adModala101') {
-			htmlIframeSrc = '8IkLVIyO--Q';
+		} else if (chkId == 'adModalc3-1') {
+			htmlIframeSrc = 'o5q6molnWDc';
+		} else if (chkId == 'adModalc3-2') {
+			htmlIframeSrc = 'fe0FM4m42g0';
+		} else if (chkId == 'adModalc4') {
+			htmlIframeSrc = '8hZvsfIzv4c?start=280';
 		}
 		$("#adModal").find("#video-block").append(htmlIframe1 + htmlIframeSrc + htmlIframe2);
 	});
@@ -162,7 +128,7 @@ $(window).on("load", function() {
 
 	extraTL.from($(".music-extra-title"), 1, { y: -200, autoAlpha: 0 })
 	.from($(".music-extra-audit"), 1, { x: 400, autoAlpha: 0 }, "-=1")
-	.from($(".music-extra-video"), 1, { scale: 0.1, autoAlpha: 0 }, "-=1")
+	.from($(".music-video"), 1, { scale: 0.1, autoAlpha: 0 }, "-=1")
 	.from($(".music-extra-detail"), 1, { x: -200, autoAlpha: 0 }, "-=1")
 	.from($(".music-extra-line-ext"), 0.3, { autoAlpha: 0 })
 	.from($(".music-extra-line"), 1, { autoAlpha: 0 });
