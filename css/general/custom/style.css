@@ -40,12 +40,10 @@ a, a:link, a:visited, a:hover {
 .momo-weight {
 	color: #ffffff;
 	text-shadow: 2px 2px 0 #000000, -1px -1px 0 #000000, 1px -1px 0 #000000, -1px 1px 0 #000000;
-	font-family: "Noto Sans TC", sans-serif;
 }
 .momo-weight-color {
 	color: #986db2;
 	text-shadow: 1px 1px 0 #ffffff, -1px -1px 0 #ffffff, 1px -1px 0 #ffffff, -1px 1px 0 #ffffff;
-	font-family: "Noto Sans TC", sans-serif;
 }
 .momo-underline {
 	background:
@@ -91,7 +89,6 @@ a, a:link, a:visited, a:hover {
 .modal-content {
 	border-radius: 2rem;
 	box-shadow: 5rem 1rem 15rem #000000;
-	font-family: "Noto Sans TC", sans-serif;
 }
 .modal-header {
 	background-image: linear-gradient(#ffbbee 1%, #ffffff 99%);
@@ -140,12 +137,12 @@ a, a:link, a:visited, a:hover {
 }
 
 .table-content-title {
-	font-size: 1.8rem;
+	font-size: 1.2rem;
 	color: #ffffff;
 	background-color: #232323;
 }
 .table-content-sub {
-	font-size: 1rem;
+	font-size: 0.7rem;
 }
 .table-content-extra-line-ext {
 	border-color: #000000;
@@ -194,6 +191,9 @@ a, a:link, a:visited, a:hover {
 }
 
 .momo-font-family {
-	font-family: "Wendy One", "Reggae One", cursive, "Noto Sans TC", sans-serif;
-	font-size: 1.4rem;
+	font-family: "Wendy One", "Reggae One", "Noto Sans TC";
+	font-size: 0.9rem;
+}
+.momo-font-family tbody .btn-sm {
+	font-size: 0.6rem;
 }
